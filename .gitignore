@@ -1,3 +1,7 @@
+# Ignore subdirectories
+
 dart/**
 go/**
 java/**
+
+results/**

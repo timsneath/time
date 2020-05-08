@@ -20,11 +20,14 @@ echo 'Java (compiled)'
 javac -d java hello.java
 ./hyperfine 'java -cp java HelloWorld' --warmup 10 --runs 100
 
+echo 'Node'
+./hyperfine 'node hello.js' --warmup 10 --runs 100
+
 echo 'Python 3'
 ./hyperfine 'python3 hello.py' --warmup 10 --runs 100
 
-echo 'Node'
-./hyperfine 'node hello.js' --warmup 10 --runs 100
+echo 'Ruby'
+./hyperfine 'ruby hello.rb' --warmup 10 --runs 100
 
 echo 'Shell'
 ./hyperfine './hello.sh' --warmup 10 --runs 100

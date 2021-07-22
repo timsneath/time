@@ -2,7 +2,7 @@
 
 mkdir -p {dart,go,java,results}
 
-dart2native hello.dart -o dart/hello 
+dart compile exe hello.dart -o dart/hello
 go build -o go hello.go
 javac -d java hello.java
 

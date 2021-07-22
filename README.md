@@ -1,3 +1,6 @@
+This repo compares the startup time for a 'Hello World'-program
+implemented in several popular programming langagues.
+
 ## Instructions
 
 Install [hyperfine](https://github.com/sharkdp/hyperfine).

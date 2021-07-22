@@ -1,3 +1,5 @@
+# timsneath/time
+
 This repo compares the startup time for a 'Hello World'-program
 implemented in several popular programming langagues.
 
@@ -6,18 +8,19 @@ implemented in several popular programming langagues.
 Install [hyperfine](https://github.com/sharkdp/hyperfine).
 
 ```bash
-$ ./run.sh
+./run.sh
 ```
 
 ## Output
+
 Results on a MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 
- - macOS Catalina Version 10.15.4 (19E287)
- - 2.8 GHz Quad-Core Intel Core i7
- - 16 GB 2133 MHz LPDDR3
- - Intel Iris Plus Graphics 655 1536 MB
+- macOS Catalina Version 10.15.4 (19E287)
+- 2.8 GHz Quad-Core Intel Core i7
+- 16 GB 2133 MHz LPDDR3
+- Intel Iris Plus Graphics 655 1536 MB
 
-```
+```plain text
 Dart (interpreted)
 Benchmark #1: dart hello.dart
   Time (mean ± σ):     148.0 ms ±  11.1 ms    [User: 154.9 ms, System: 50.3 ms]

@@ -15,59 +15,57 @@ Install [hyperfine](https://github.com/sharkdp/hyperfine).
 
 Results on a MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 
-- macOS Catalina Version 10.15.4 (19E287)
+- macOS Monterey Version 12.0 Beta (21A5284e)
 - 2.8 GHz Quad-Core Intel Core i7
 - 16 GB 2133 MHz LPDDR3
 - Intel Iris Plus Graphics 655 1536 MB
 
 ```plain text
+$ ./run.sh
 Dart (interpreted)
 Benchmark #1: dart hello.dart
-  Time (mean ± σ):     148.0 ms ±  11.1 ms    [User: 154.9 ms, System: 50.3 ms]
-  Range (min … max):   141.5 ms … 237.9 ms    100 runs
+  Time (mean ± σ):     209.5 ms ± 141.2 ms    [User: 177.4 ms, System: 66.7 ms]
+  Range (min … max):   185.3 ms … 1205.4 ms    100 runs
  
 Dart (AOT compiled)
-Generated: /Users/timsneath/git/time/dart/hello
+Info: Compiling with sound null safety
+Generated: /Users/timsneath/git/me/time/dart/hello
 Benchmark #1: dart/hello
-  Time (mean ± σ):       8.4 ms ±   0.5 ms    [User: 3.9 ms, System: 3.6 ms]
-  Range (min … max):     7.6 ms …  10.2 ms    100 runs
+  Time (mean ± σ):      12.8 ms ±   0.7 ms    [User: 6.3 ms, System: 4.2 ms]
+  Range (min … max):    11.7 ms …  17.2 ms    100 runs
  
 Go (interpreted)
 Benchmark #1: go run hello.go
-  Time (mean ± σ):     386.1 ms ±  83.6 ms    [User: 171.1 ms, System: 132.9 ms]
-  Range (min … max):   336.0 ms … 893.0 ms    100 runs
+  Time (mean ± σ):     285.7 ms ±   9.0 ms    [User: 147.0 ms, System: 145.1 ms]
+  Range (min … max):   270.9 ms … 329.0 ms    100 runs
  
 Go (compiled)
 Benchmark #1: go/hello
-  Time (mean ± σ):       3.2 ms ±   0.4 ms    [User: 1.1 ms, System: 1.2 ms]
-  Range (min … max):     2.7 ms …   4.7 ms    100 runs
- 
-  Warning: Command took less than 5 ms to complete. Results might be inaccurate.
+  Time (mean ± σ):       3.7 ms ±   0.6 ms    [User: 1.2 ms, System: 1.3 ms]
+  Range (min … max):     2.9 ms …   6.7 ms    100 runs
  
 Java (compiled)
 Benchmark #1: java -cp java HelloWorld
-  Time (mean ± σ):      90.9 ms ±   3.6 ms    [User: 83.3 ms, System: 23.8 ms]
-  Range (min … max):    88.1 ms … 114.5 ms    100 runs
+  Time (mean ± σ):      40.5 ms ±   1.2 ms    [User: 24.2 ms, System: 14.5 ms]
+  Range (min … max):    39.0 ms …  44.4 ms    100 runs
  
 Node
 Benchmark #1: node hello.js
-  Time (mean ± σ):      31.1 ms ±   1.3 ms    [User: 24.5 ms, System: 5.5 ms]
-  Range (min … max):    29.4 ms …  38.3 ms    100 runs
+  Time (mean ± σ):      33.9 ms ±   0.6 ms    [User: 27.7 ms, System: 5.4 ms]
+  Range (min … max):    32.4 ms …  36.0 ms    100 runs
  
 Python 3
 Benchmark #1: python3 hello.py
-  Time (mean ± σ):      36.8 ms ±   1.1 ms    [User: 22.1 ms, System: 11.3 ms]
-  Range (min … max):    35.4 ms …  43.4 ms    100 runs
+  Time (mean ± σ):      30.0 ms ±   1.5 ms    [User: 19.0 ms, System: 7.4 ms]
+  Range (min … max):    27.7 ms …  36.9 ms    100 runs
  
 Ruby
 Benchmark #1: ruby hello.rb
-  Time (mean ± σ):      83.4 ms ±   5.3 ms    [User: 56.8 ms, System: 22.0 ms]
-  Range (min … max):    79.1 ms … 128.8 ms    100 runs
+  Time (mean ± σ):      62.2 ms ±   1.1 ms    [User: 47.7 ms, System: 12.2 ms]
+  Range (min … max):    59.5 ms …  65.7 ms    100 runs
  
 Shell
 Benchmark #1: ./hello.sh
-  Time (mean ± σ):       1.9 ms ±   0.4 ms    [User: 0.6 ms, System: 1.0 ms]
-  Range (min … max):     1.4 ms …   3.5 ms    100 runs
- 
-  Warning: Command took less than 5 ms to complete. Results might be inaccurate
+  Time (mean ± σ):       2.3 ms ±   0.6 ms    [User: 0.8 ms, System: 1.1 ms]
+  Range (min … max):     1.5 ms …   3.9 ms    100 runs
 ```

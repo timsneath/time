@@ -6,7 +6,7 @@ echo 'Dart (interpreted)'
 ./hyperfine 'dart hello.dart' --warmup 10 --runs 100
 
 echo 'Dart (AOT compiled)'
-dart2native hello.dart -o dart/hello 
+dart compile exe hello.dart -o dart/hello 
 ./hyperfine 'dart/hello' --warmup 10 --runs 100
 
 echo 'Go (interpreted)'
